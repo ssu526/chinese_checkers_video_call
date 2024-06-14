@@ -1,0 +1,232 @@
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #33383d;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/***** START SCREEN *****/
+.startScreen {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option {
+  color: white;
+  border: 1px solid white;
+  padding: 30px;
+  margin: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 400px;
+  min-width: 400px;
+  height: 300px;
+}
+
+.option-title {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.option-subtitle {
+  color: yellow;
+}
+
+.option input {
+  width: 250px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.option select {
+  width: 264px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.btn_join,
+.btn_create {
+  margin-top: 20px;
+  border: none;
+  color: black;
+  text-align: center;
+  display: block;
+  padding: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+button:hover {
+  background-color: brown;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.errorMessage_create,
+.errorMessage_join {
+  color: red;
+}
+
+i {
+  color: brown;
+}
+
+/***** GAME SCREEN *****/
+.container {
+  display: none;
+  margin: auto;
+  padding: 50px;
+}
+
+.canvas_container {
+  padding: 70px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.waiting {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  width: 80%;
+  padding: 20px;
+  /** glass effect **/
+  background: rgba(255, 255, 255, 0.247);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/*** DONE BUTTON ***/
+.done {
+  display: none;
+  cursor: pointer;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 400px;
+  color: blanchedalmond;
+  margin: auto;
+  margin-top: 50px;
+  height: 80px;
+}
+
+.done div span {
+  font-size: 20px;
+}
+
+/**** RESET and ROOM ID***/
+.reset_roomId {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.reset {
+  visibility: hidden;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px;
+  color: gray;
+  border: none;
+  outline: none;
+}
+
+.reset:hover {
+  cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.gameboard-roomid {
+  color: white;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.gameboard-roomid:hover {
+  border: 1px solid gray;
+  background: rgba(255, 255, 255, 0.247);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.roomid-text {
+  color: gray;
+  text-align: center;
+  cursor: pointer;
+}
+
+/***** VIDEOS CONTAINER *****/
+.videos_container {
+  margin-left: 50px;
+  margin-right: 50px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 15px;
+}
+
+video {
+  width: 100%;
+  min-width: 300px;
+  height: auto;
+}
+
+.two_columns {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.video_toggle,
+.audio_toggle {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 80px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.video_on,
+.unmute {
+  background-color: rgb(12, 187, 12);
+}
+
+.video_off,
+.mute {
+  background-color: rgb(228, 0, 0);
+}

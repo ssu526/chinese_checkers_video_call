@@ -1,0 +1,16 @@
+{
+  "name": "chinese_checkers_video",
+  "version": "1.0.0",
+  "description": "Chinese Checkers with video call",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sue Su",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
